@@ -1,0 +1,15 @@
+Install JDK
+Install Node
+Fetch Project from GitHub
+
+Go to back-end directory
+run 
+	java -jar <jar_name>.jar
+
+Go to front-end directory
+run
+	npm install --force
+	npm start
+
+Open a browser
+Open localhost:3000
