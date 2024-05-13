@@ -2,9 +2,9 @@
  FSAD Project on Book Exchange Platform  by Group 35
 
 # Steps to Install & Run
- Install JDK
- Install Node
- Install MySQL
+ # Install JDK
+ # Install Node
+ # Install MySQL
  Fetch Project from GitHub
  Get and Insert the SQL Dump
  
@@ -13,7 +13,7 @@
  run 
  	java -jar BookExchange-0.0.1-SNAPSHOT.jar
  
- Go to front-end directory 
+ Go to the front-end directory 
  Open Terminal
  run
  	npm install --force
