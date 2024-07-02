@@ -1,6 +1,6 @@
-# FSAD_Project_BookExchange_Group35
- FSAD Project on Book Exchange Platform  by Group 35
-
+# Book Exchange Project
+ Full Stack Project on Book Exchange Platform 
+ 
 # Steps to Install & Run
 1. Install JDK
 2. Install Node
