@@ -1,19 +1,53 @@
-Install JDK
-Install Node
-Install MySQL
-Fetch Project from GitHub
-Get and Insert the SQL Dump
+BOOK EXCHANGE PROJECT - INSTALLATION STEPS
 
-Go to the back-end directory (/target)
-Open Terminal
-run 
-	java -jar BookExchange-0.0.1-SNAPSHOT.jar
+PREREQUISITES
+-------------
+1. Java Development Kit (JDK) 17 or higher
+2. Node.js (LTS recommended) and npm
+3. MySQL Server
 
-Go to the front-end directory 
-Open Terminal
-run
-	npm install --force
-	npm start
+STEP 1: DATABASE SETUP
+----------------------
+1. Create a new database in MySQL named: mf_suger_uat
+   Command: CREATE DATABASE mf_suger_uat;
+2. Import the "BookExchange_SQL_Dump.sql" file (found in the root directory) into this database.
+   Command: mysql -u root -p mf_suger_uat < BookExchange_SQL_Dump.sql
 
-Open a browser
-Open localhost:<port>
+STEP 2: BACKEND SETUP
+---------------------
+1. Navigate to the backend directory:
+   cd Book_Exchange_Platform_Backend
+
+2. Update Configuration (if needed):
+   Open "src/main/resources/application.properties".
+   - Ensure "spring.datasource.username" and "spring.datasource.password" match your MySQL credentials.
+   - Default Port: 6464
+
+3. Run the Backend:
+   Windows: ./mvnw.cmd spring-boot:run
+   Mac/Linux: ./mvnw spring-boot:run
+
+STEP 3: FRONTEND SETUP
+----------------------
+1. Navigate to the frontend directory:
+   cd Book_Exchange_Platform_UI
+
+2. Install Dependencies:
+   npm install --force
+
+3. Run the Frontend:
+   npm start
+
+4. Open Browser:
+   Go to http://localhost:3000
+
+DEPLOYMENT (OPTIONAL)
+---------------------
+Backend:
+- Run: ./mvnw clean package
+- The jar file will be in the "target" folder.
+- Run: java -jar target/BookExchange-0.0.1-SNAPSHOT.jar
+
+Frontend:
+- Run: npm run build
+- Serve the contents of the "build" folder using a web server.
